@@ -1,0 +1,28 @@
+0.  an artificial long word said to mean a lung disease caused by inhaling very fine ash and sand dust.
+
+1.   getrusage() returns resource usage measures  for the calling process,  for all children of the calling process that have terminated 
+     and been waited for and for the calling thread.
+     
+2.   members available in a variable of type struct rusage are 16.
+
+3.  Passing in values involves copying the two 16 member struts which would take some time and memory. Since the purpose of getrusage() is to track
+    the resources required (including time and RAM) this would lead to inaccuracies. Additionally, if a rusage struct has an undefined value it is
+    autonatically set to zero. This negates any dereferencing crashes or extra checks.
+    
+4.   Speller.c reads words from the file, character by character, using a for loop to begin reading the first character of 
+    the file, incrementing by one character until it reaches the end of the file. If the character is a letter or apostrophe,
+    it is added to a word. If the word becomes larger than what we have defined as the largest word possible, the word is
+    ignored. If the word has a digit, it is ignored as well.
+    
+5.   To be able to account for numerical inputs and other punctuation which we have deemed invalid.
+
+6.  Because word LENGTH and DICTIONARY are # declared as constants (word is an array of LENGTH+1)
+
+7.  I used Hash table to implement speller in which i made an array of linked lists and then furthur linked with them with additional nodes.
+    Inside nodes a string that represented word and pointer to next node were present.
+    
+8.  On first attempt total time taken was 4 seconds.
+
+9.  Tries would defenately increase code's performance as compared to hash tables.
+
+10. I used function ctrcasecmp to get away with upper and lowercase errors.
